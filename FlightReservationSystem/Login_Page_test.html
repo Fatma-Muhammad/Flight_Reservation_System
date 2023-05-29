@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel = "icon" href ="icons8-login-66.png" type ="image/x-icon">
+    <script src="ScriptFile.js" defer></script>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(f4.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+        }
+
+        *{
+            margin:0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .main-wrap{
+            /*background: linear-gradient(rgb(76, 39, 145) 20%,rgb(103, 60, 182) 40%);*/
+            width:100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+        .box-container{
+            display: flex;
+            width:860px;
+            height:530px;
+            background:#fff;
+        }
+        .img-box{
+            width:50%;
+            height: 100%;
+            background-image: url("Background_login.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .form-wrap{
+            width:50%;
+            height: 100%;
+            padding: 20px;
+        }
+        .form-wrap .top-signup{
+            text-align: right;
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgb(155, 152, 152);
+        }
+        .form-wrap .signup-btn{
+            text-decoration: none;
+            color: rgb(155, 152, 152);
+            border: 1px solid rgb(182, 181, 181);
+            padding: 4px 8px;
+            font-size: 12px;
+            margin-left: 8px;
+            border-radius: 16px;
+        }
+        .form-wrap .signup-btn:hover{
+            background-color: rgba(238, 238, 238, 0.527);
+        }
+        .form-wrap .mid-container{
+            padding-top: 40px;
+            padding-left: 40px;
+        }
+        .mid-container h6{
+            font-size: 16px;
+            font-weight: 400;
+            padding: 8px 2px;
+            letter-spacing: 0.002rem;
+            color:rgb(155, 152, 152);
+        }
+        .mid-container .form{
+            padding-top: 26px;
+        }
+        .mid-container .form label{
+            font-weight: 500;
+        }
+        .mid-container .form input{
+            width:320px;
+            margin: 6px 0px;
+            height:33px;
+            color:rgb(155, 152, 152);
+            padding-left: 5px;
+            border-radius: 4px;
+            border: 1px solid rgb(216, 215, 215);
+        }
+        .mid-container .form input:focus{
+            border: 1px solid rgb(182, 180, 180);
+            outline: none;
+        }
+        .mid-container .form input::placeholder{
+            color: rgb(175, 174, 174);
+        }
+        .fg-pass{
+            color:rgb(175, 174, 174);
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .mid-container .form .login-btn{
+            padding:10px;
+            cursor: pointer;
+            width: 140px;
+            font-size: 16px;
+            margin-top: 20px;
+            background-color: rgb(114, 114, 248);
+            color: rgb(247, 244, 244);
+            border-radius:20px;
+            border: none;
+        }
+        .mid-container .form .login-btn:hover{
+            background-color: rgba(39, 39, 175, 0.938);
+            transition: all ease 1s;
+        }
+        .login-with{
+            padding: 70px 40px;
+        }
+        .login-with span{
+            color: rgb(175, 174, 174);
+            margin-right: 12px;
+        }
+        .login-with a{
+            border: 1px solid rgb(223, 221, 221);
+            border-radius: 30px;
+            padding:8px;
+            width:25px;
+            margin: 4px 5px;
+            height:25px;
+        }
+        .login-with a img{
+            width:18px;
+            height:18px;
+            margin-bottom: -3px;
+        }
+
+        #message {
+            display:none;
+            background: #f1f1f1;
+            color: #000;
+            position: relative;
+            padding: 20px;
+            margin-top: 10px;
+          }
+          
+          #message p {
+            padding: 10px 35px;
+            font-size: 18px;
+          }
+          
+          /* Add a green text color and a checkmark when the requirements are right */
+          .valid {
+            color: green;
+          }
+          
+          .valid:before {
+            position: relative;
+            left: -35px;
+            content: "✔";
+          }
+          
+          /* Add a red text color and an "x" when the requirements are wrong */
+          .invalid {
+            color: red;
+          }
+          
+          .invalid:before {
+            position: relative;
+            left: -35px;
+            content: "✖";
+          }
+          .mb-bottom {
+            margin-bottom: 0.6rem;
+          }
+
+          
+          .password-box {
+            position: relative;
+          }
+          
+          .password-box i{
+            position: absolute;
+            top: 0.9rem;
+            left: 83%;
+            font-size: 12px;
+            cursor: pointer;
+            color: #3d3d3d;
+            z-index: 5;
+          }
+          
+          .fa-eye{
+            position: absolute;
+            top: 28%;
+           
+            cursor: pointer;
+            color: lightgray;
+          }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="main-wrap">
+      <div class="box-container">
+            <div class="img-box">
+
+      </div>
+            <div class="form-wrap">
+                <div class="top-signup">
+                    <span>Don't you have an account?</span>
+                    <a href="sign_up_test.html" class="signup-btn">SIGN UP</a>
+                </div>
+                <div class="mid-container">
+                    <h1>Welcome Back</h1>
+                    <h6>Login your Account</h6>
+                    <form action="" class="form">
+                        <label for="username">Username</label><br>
+                        <input type="text" name="username" id="" placeholder="Your Username Or Email.." spellcheck="true" required> 
+                        <br><br>
+                        <label for="password">Password</label><br>
+                    <div class="password-box mb-bottom">
+                        <input type="password" name="password" id="pass" placeholder="Your password.." required>
+                        <i class="fa-solid fa-eye" id="eye"></i><br>
+                    </div>
+                        <span><a href="Forget_Password_Page.html" class="fg-pass">Forgot password?</a></span>
+                        <br>
+                        <button type="submit" class="login-btn" formaction="Dashboard_Page.html">Login</button>
+                    </form>
+                </div>
+
+                <div class="login-with">
+                    <span>Login with</span>
+                    <a href="https://www.facebook.com/Fatma.Mohammed74?mibextid=ZbWKwL"><img src="fb.png" alt="Facebook Image"></a>
+                    <a href="fatmamuhammad504@gmail.com"><img src="google.png" alt="Google Image"></a>
+                    <a href="https://www.linkedin.com/in/fatma-mohamed-ibrahim-492149223"><img src="linkedin.jpg" alt="Linkedin Image"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

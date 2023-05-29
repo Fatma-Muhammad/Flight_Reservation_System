@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel = "icon" href ="icons8-sign-up-50.png" type ="image/x-icon">
+        <script src="ScriptFile.js" defer></script>
+
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+
+            body{
+                background-image: url("skyyy1.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .main-wrap{
+                position: relative;
+                width: 100%;
+            }
+            .form-wrap{
+                margin:auto;
+                margin-bottom: 28px;
+                margin-top: 35px;
+                border-radius: 11px;
+                padding:80px 25px;
+                background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+                width:350px;
+                height:auto;
+            }
+            .form-wrap h1{
+                color: rgb(238, 237, 237);
+            }
+            .form-wrap h6{
+                color:rgb(212, 211, 211);
+                font-size:14px;
+                margin-bottom:20px;
+            }
+            .form-wrap span{
+                color:rgb(23, 206, 212);
+            }
+            .formValidate input{
+                margin: 8px 0px;
+                height:30px;
+                width:100%;
+                border:none;
+                border-radius: 20px;
+                padding-left:14px;
+                color:rgb(238, 237, 237);
+                background-color: rgb(7, 6, 10);
+            }
+            .formValidate input:focus{
+                border:none;
+                outline:none;
+            }
+            .formValidate input::placeholder{
+                padding-left: 4px;
+            }
+            .formValidate .form-btn{
+                width:100px;
+                border-radius:20px;
+                padding:5px;
+                cursor:pointer;
+                font-weight:550;
+                margin-top:16px;
+                border:0.1rem solid rgb(35, 215, 221);
+                color:rgb(35, 215, 221);
+                background-color: transparent;
+            }
+            .form-btn:hover{
+                background-color: rgb(17, 16, 29);
+            }
+            .sign-up-with{
+                padding:40px 10px;
+                width:100%;
+                display:inline-block;
+                text-align:center;
+                color:rgb(206, 202, 202) !important;
+            }
+            .social-logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .social-logo a{
+                background-color: #fff;
+                width:30px;
+                height:30px;
+                margin:2px 25px;
+                padding:5px;
+                border-radius:20px;
+            }
+            .social-logo a img{
+                height:20px;
+                width:20px;
+            }
+            
+            .mb-bottom {
+                margin-bottom: 0.6rem;
+              }
+
+              
+              .password-box {
+                position: relative;
+              }
+              
+              .password-box i{
+                position: absolute;
+                top: 0.9rem;
+                right: 0.4rem;
+                font-size: 12px;
+                cursor: pointer;
+                color: #3d3d3d;
+                z-index: 5;
+              }
+              
+
+              .pass-instruction {
+                color: #058520;
+                font-size: 12px;
+                width: 260px;
+                display: inline-block;
+                text-align: justify;
+                /* margin: 5px 0px; */
+              }
+
+              .fa-eye{
+                position: absolute;
+                top: 28%;
+                right: 4%;
+                cursor: pointer;
+                color: rgb(250, 242, 242);
+              }
+
+              #email,#pass,#cpass{
+                color: #eeeeee;
+                transition: 0.3s;
+              }
+
+            
+
+        </style>
+    </head>
+    <body>
+
+       <div class="main-wrap">
+           <div class="form-wrap">
+               <h1>SIGN <span>UP</span></h1>
+               <h6>Welcome to Airline Reservation Website</h6>
+               <form class="formValidate" action= "Login_Page_test.html" method="post">
+                   <input type="text" name="username" id="username" placeholder="Username" spellcheck="true" required>
+                   <br>
+
+                   <input type="email" class="form-control" name="email" id="email" placeholder="Email" spellcheck="true" required>
+                   <br>
+
+                <div class="password-box mb-bottom">
+                   <input type="password" class="form-control" name="password" id="pass" placeholder="Password" spellcheck="true" required>
+                   <i class="fa-solid fa-eye" id="eye" style="color:#aa9e9e;"></i>
+                   <br>
+                </div>
+                    <span class="pass-instruction mb-bottom">
+                    Password must be greater than or equal to 8 and must contain special
+                    characters, an upper case, a lower case and 0-9 number. </span>
+                    <br>
+
+                   <input type="password" class="form-control" name="confirm_password" id="cpass" placeholder="Confirm Password" required>
+                    <br>
+
+                   <input type="submit" value="SIGN UP" class="form-btn"/>
+               </form action="Login_Page_test.html">
+
+               <span class="sign-up-with">Or sign up with</span>
+               <div class="social-logo">
+                    <a href="https://www.facebook.com/Fatma.Mohammed74?mibextid=ZbWKwL" title="Facebook">
+                        <img src="fb.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.google.com/?hl=ar" title="Google">
+                        <img src="google.png" alt="Google">
+                    </a>
+                    <a href="https://www.linkedin.com/in/fatma-mohamed-ibrahim-492149223" title="Linkedin">
+                        <img src="linkedin.jpg" alt="Linkedin">
+                    </a>
+               </div>
+           </div>
+       </div>
+    </body>
+</html>
